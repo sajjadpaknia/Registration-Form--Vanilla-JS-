@@ -1,0 +1,553 @@
+/* reset placeholder */
+::placeholder {
+  color: var(--color-black-50);
+  opacity: 1;
+  letter-spacing: 0;
+}
+:-ms-input-placeholder {
+  color: var(--color-black-50);
+  opacity: 1;
+  letter-spacing: 0;
+}
+::-ms-input-placeholder {
+  color: var(--color-black-50);
+  opacity: 1;
+  letter-spacing: 0;
+}
+/* reset placeholder */
+.form-container-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  margin-top: 4rem;
+}
+.form-container-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: left 0.3s, right 0.3s, opacity 0.3s, visibility 0.3s;
+  -webkit-transition: left 0.3s, right 0.3s, opacity 0.3s, visibility 0.3s;
+  -moz-transition: left 0.3s, right 0.3s, opacity 0.3s, visibility 0.3s;
+  -ms-transition: left 0.3s, right 0.3s, opacity 0.3s, visibility 0.3s;
+  -o-transition: left 0.3s, right 0.3s, opacity 0.3s, visibility 0.3s;
+  opacity: 1;
+  visibility: visible;
+}
+.form-container-content.signUp.hide {
+  opacity: 0;
+  visibility: hidden;
+  right: -100%;
+}
+.form-container-content.signUp.show {
+  right: 0;
+}
+.form-container-content.login.show {
+  left: 0;
+}
+.form-container-content.login.hide {
+  opacity: 0;
+  visibility: hidden;
+  left: -100%;
+}
+.title-actions {
+  width: 100%;
+  min-height: 120px;
+  /* background-color: rgb(255, 205, 130); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.title-actions__headline {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+.title-actions__desc {
+  color: var(--text-primary);
+  /* opacity: 0.7; */
+  font-weight: 400;
+  font-size: 1.4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-black-20);
+}
+.auth-connections {
+  width: 100%;
+  height: 40px;
+  flex-wrap: wrap;
+  /* background-color: rgb(255, 254, 181); */
+}
+.auth-connections__item {
+  width: 47%;
+  height: 100%;
+  display: flex;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  overflow: hidden;
+  color: var(--color-white-100);
+  transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+}
+.auth-connections__item.google {
+  background-color: #4285f4;
+}
+.auth-connections__item.google:hover {
+  background-color: hsl(217, 89%, 54%);
+}
+.auth-connections__item.twitter {
+  background-color: #1da1f2;
+}
+.auth-connections__item.twitter:hover {
+  background-color: hsl(203, 89%, 46%);
+}
+.auth-connections__item__logo {
+  padding: 0.6rem;
+  width: 30px;
+  flex-shrink: 0;
+  height: 100%;
+  background-color: var(--color-white-100);
+  border-radius: 0.5rem;
+}
+.auth-connections__item__text {
+  flex-grow: 1;
+  margin-inline-start: 1rem;
+  text-align: center;
+}
+.step {
+  width: 100%;
+  height: 25px;
+  cursor: default;
+  margin-bottom: 2rem;
+  /* background-color: rgb(255, 254, 181); */
+}
+.step__item {
+  height: 100%;
+  margin-inline-end: 2rem;
+  display: flex;
+  font-size: 1.3rem;
+  color: var(--color-black-50);
+  /* background-color: brown; */
+}
+.step__item:last-child {
+  margin: 0;
+}
+
+.step__item__number {
+  width: 25px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.07);
+  border-radius: 0.9rem;
+  -webkit-border-radius: 0.9rem;
+  -moz-border-radius: 0.9rem;
+  -ms-border-radius: 0.9rem;
+  -o-border-radius: 0.9rem;
+  transition: background-color 0.3s, color 0.3s;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  -moz-transition: background-color 0.3s, color 0.3s;
+  -ms-transition: background-color 0.3s, color 0.3s;
+  -o-transition: background-color 0.3s, color 0.3s;
+}
+.step__item__title {
+  margin-inline-start: 0.5rem;
+  transition: color 0.3s;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -o-transition: color 0.3s;
+}
+.step__item__number__img {
+  width: 70%;
+}
+.step__item .step__item__number__text {
+  display: block;
+}
+.step__item .step__item__number__img {
+  display: none;
+}
+.step__item.active .step__item__number {
+  color: var(--color-white-100);
+  background-color: var(--color-primary);
+  /* background-color: var(--color-primary); */
+}
+.step__item.active .step__item__title {
+  color: var(--color-primary);
+}
+.step__item.active .step__item__number__text {
+  display: none;
+}
+.step__item.active .step__item__number__img {
+  display: block;
+}
+.form-box-container-wrapper {
+  width: 100%;
+  height: 100%;
+  /* background-color: rgb(0, 168, 42); */
+  overflow: hidden;
+  position: relative;
+}
+.form-box-container {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  transition: left 0.3s, right 0.3s;
+  /* background-color: rgb(255, 152, 152); */
+}
+.form-box {
+  width: 100%;
+  height: max-content;
+  /* background-color: rgb(163, 130, 255); */
+}
+.signUp-form,
+.account-form {
+  /* background-color: rgb(255, 255, 255); */
+}
+.signUp-form {
+  left: -100%;
+  /* background-color: rgb(0, 255, 200); */
+}
+.account-form {
+  left: 100%;
+  /* background-color: rgb(255, 187, 0); */
+}
+.upload-form {
+  left: 100%;
+  /* background-color: rgb(204, 0, 255); */
+}
+.signUp-form.show {
+  left: 0;
+}
+.account-form.show {
+  left: 0;
+}
+.upload-form.show {
+  left: 0;
+}
+.signUp-form.hide {
+  left: -100%;
+}
+.account-form.hide {
+  left: -100%;
+}
+.upload-form.hide {
+  left: -100%;
+}
+.email-fieldset,
+.password-fieldset,
+.name-box-fieldset,
+.upload-fieldset {
+  height: max-content;
+}
+.email-fieldset {
+  /* background-color: darkseagreen; */
+}
+.password-fieldset {
+  width: 100%;
+  /* background-color: rgb(188, 172, 143); */
+}
+.name-box-fieldset {
+  /* background-color: rgb(168, 143, 188); */
+}
+.username-fieldset {
+  /* background-color: rgb(143, 179, 188); */
+}
+.fieldset-input__container {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  /* background-color: rgb(255, 72, 72); */
+}
+.name-fieldset {
+  width: 50%;
+}
+
+.title-input {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  transition: color 0.3s;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -o-transition: color 0.3s;
+}
+input[type="text"]:not(#password) {
+  text-transform: lowercase;
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 1rem;
+  color: var(--text-primary);
+  border: 1px solid var(--color-black-30);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  transition: border-color 0.3s, background 0.3s;
+  -webkit-transition: border-color 0.3s, background 0.3s;
+  -moz-transition: border-color 0.3s, background 0.3s;
+  -ms-transition: border-color 0.3s, background 0.3s;
+  -o-transition: border-color 0.3s, background 0.3s;
+}
+input[type="password"],
+input[type="text"]#password {
+  letter-spacing: 5px;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border: 1px solid var(--color-secondary);
+  background: var(--color-secondary-light);
+}
+.upload-fieldset {
+  height: max-content;
+  cursor: pointer;
+  text-align: center;
+  padding: 2rem;
+  margin-inline: 4rem;
+  background-color: rgb(255, 255, 255);
+  border: 1px;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  outline: var(--color-black-30) dashed 2px;
+  transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+}
+.upload-fieldset:hover {
+  background-color: hsl(0, 0%, 95%);
+}
+.upload-fieldset:active {
+  background-color: rgb(0, 0, 0);
+}
+.add_file__icon__img {
+  transition: transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+}
+.upload-fieldset:hover .add_file__icon__img {
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+.add_file {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.add_file__icon {
+  width: 50px;
+  height: 50px;
+  padding: 1.5rem;
+  border: 2px solid #10154c;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.add_file__desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.4;
+}
+.add_file__desc__support {
+  font-size: 1.2rem;
+  margin-block: 1rem;
+  color: var(--color-black-80);
+}
+.upload-result {
+  height: 40px;
+  margin: 1rem 4rem;
+  padding-inline: 2rem;
+  background-color: rgb(218, 225, 231);
+  font-size: 1.3rem;
+  color: var(--color-black-70);
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  visibility: hidden;
+  opacity: 0;
+}
+.upload-result.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.upload-result__icon {
+  width: 13px;
+}
+.upload-result__file {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.upload-result__file.hide {
+  display: none;
+}
+.upload-result__file-name {
+  width: 100px;
+  overflow: hidden;
+  height: max-content;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-left: 1rem;
+}
+.upload-result__file-size {
+  font-size: 1.1rem;
+}
+.upload-result__file-success {
+  width: 15px;
+  margin-left: 2rem;
+}
+.upload-result__progress {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.upload-result__progress.hide {
+  display: none;
+}
+.progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: var(--color-black-20);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.progress-bar--load {
+  width: 0;
+  height: 100%;
+  border-radius: 100px;
+  background-color: var(--color-primary);
+}
+.progress-percent {
+  width: 50px;
+  text-align: right;
+}
+/* The eye icon inside the password input */
+.eye-icon-container {
+  width: 50px;
+  height: 4rem;
+  padding: 1.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.3;
+  cursor: pointer;
+  z-index: 0;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+}
+
+.eye-icon-container:hover {
+  opacity: 0.4;
+}
+.eye-icon-container > img:last-child {
+  display: none;
+}
+.eye-icon-container.hide > img:first-child {
+  display: none;
+}
+.eye-icon-container.hide > img:last-child {
+  display: block;
+}
+/* The eye icon inside the password input */
+.forgot-password {
+  display: block;
+  color: var(--color-secondary);
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+}
+/* error container */
+.sub-input-container {
+  width: 100%;
+  min-height: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* background-color: darkorange; */
+}
+.input-error-msg {
+  color: var(--color-error);
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  margin: 0.5rem 1rem 0 0;
+  font-size: 1.2rem;
+  transition: color 0.3s, opacity 0.3s, visibility 0.3s;
+  -webkit-transition: color 0.3s, opacity 0.3s, visibility 0.3s;
+  -moz-transition: color 0.3s, opacity 0.3s, visibility 0.3s;
+  -ms-transition: color 0.3s, opacity 0.3s, visibility 0.3s;
+  -o-transition: color 0.3s, opacity 0.3s, visibility 0.3s;
+}
+/* error container */
+
+/* error handling */
+fieldset.error .title-input {
+  color: var(--color-error);
+}
+fieldset.error input {
+  /* color: var(--color-error); */
+  border: 1px solid var(--color-error);
+  background: var(--color-error-light);
+}
+fieldset.error input:focus {
+  border: 1px solid var(--color-error);
+  background: var(--color-error-light);
+}
+fieldset.error .input-error-msg {
+  visibility: visible;
+  opacity: 1;
+}
+/* error handling */
+
+/* error handling */
+fieldset.valid .title-input {
+  color: var(--color-secondary-2);
+}
+fieldset.valid input {
+  /* color: var(--color-error); */
+  border: 1px solid var(--color-secondary-2);
+  background: var(--color-secondary-2-light);
+}
+fieldset.valid input:focus {
+  border: 1px solid var(--color-secondary-2);
+  background: var(--color-secondary-2-light);
+}
+
+/* error handling */

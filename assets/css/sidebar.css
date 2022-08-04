@@ -1,0 +1,209 @@
+/* sidebar container login */
+
+.sidebar-container {
+  position: relative;
+  color: var(--color-white-100);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.sidebar-container.login {
+  background-color: var(--color-primary);
+}
+.sidebar-logo-contianer {
+  width: 100%;
+  /* background-color: rgb(255, 180, 180); */
+  padding: 4rem 4rem 2rem 4rem;
+}
+.sidebar-logo {
+  width: 40px;
+}
+.sidebar-content {
+  width: 100%;
+  padding: 2rem 4rem;
+  /* background-color: rgb(255, 160, 210); */
+}
+.sidebar-heading {
+  /* background-color: brown; */
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.sidebar-heading__text {
+  font-size: 1.8rem;
+}
+.sidebar-big-title {
+  width: 100%;
+  /* background-color: rgb(52, 104, 0); */
+  margin-bottom: 5rem;
+}
+.sidebar-big-title__text {
+  line-height: 0.9;
+  font-weight: 800;
+  font-size: 6rem;
+}
+.sidebar-description {
+  width: 100%;
+  height: 160px;
+  /* background-color: teal; */
+  font-size: 1.4rem;
+  font-weight: 200;
+}
+.sidebar-description-container {
+  /* background-color: brown; */
+  max-width: 320px;
+  height: 100%;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border: 1px solid var(--color-white-40);
+}
+.sidebar-description__text {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  overflow: hidden;
+}
+.sidebar-description__text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  backdrop-filter: blur(10px);
+}
+.sidebar-description__author__name {
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+.sidebar-description__author__sub-name {
+  color: var(--color-white-50);
+  font-size: 1.1rem;
+}
+
+.sidebar-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  /*background-color: rgb(0, 114, 114);
+  */transition: opacity 0.3s, visibility 3s;
+  -webkit-transition: opacity 0.3s, visibility 3s;
+  -moz-transition: opacity 0.3s, visibility 3s;
+  -ms-transition: opacity 0.3s, visibility 3s;
+  -o-transition: opacity 0.3s, visibility 3s;
+}
+.element-1,
+.element-2,
+.element-3 {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: top 0.3s, left 0.3s, right 0.3s, bottom 0.3s;
+  -webkit-transition: top 0.3s, left 0.3s, right 0.3s, bottom 0.3s;
+  -moz-transition: top 0.3s, left 0.3s, right 0.3s, bottom 0.3s;
+  -ms-transition: top 0.3s, left 0.3s, right 0.3s, bottom 0.3s;
+  -o-transition: top 0.3s, left 0.3s, right 0.3s, bottom 0.3s;
+  filter: drop-shadow(0 5px 50px rgb(0 0 0 / 10%));
+  -webkit-filter: drop-shadow(0 5px 50px rgb(0 0 0 / 10%));
+}
+
+.element-1 {
+  top: 5%;
+  right: 11%;
+  background: url(../images/elements/1.svg) no-repeat center;
+}
+.element-2 {
+  top: 23%;
+  left: 5%;
+  background: url(../images/elements/2.svg) no-repeat center;
+}
+.element-3 {
+  bottom: 5%;
+  left: 20%;
+  background: url(../images/elements/3-dark.svg) no-repeat center;
+}
+.sidebar-container.login:hover .sidebar-card {
+    bottom: -2rem;
+    right: -2rem;
+}
+.sidebar-card {
+  position: absolute;
+  width: 200px;
+  min-height: 280px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  color: var(--color-primary);
+  box-shadow: 0 5px 50px rgb(0 0 0 / 30%);
+  transform: rotateZ(15deg);
+  -webkit-transform: rotateZ(15deg);
+  -moz-transform: rotateZ(15deg);
+  -ms-transform: rotateZ(15deg);
+  -o-transform: rotateZ(15deg);
+  transition: transform 0.3s, bottom 0.3s, right 0.3s;
+  -webkit-transition: transform 0.3s, bottom 0.3s, right 0.3s;
+  -moz-transition: transform 0.3s, bottom 0.3s, right 0.3s;
+  -ms-transition: transform 0.3s, bottom 0.3s, right 0.3s;
+  -o-transition: transform 0.3s, bottom 0.3s, right 0.3s;
+  animation: motion 1s ease-in-out;
+  -webkit-animation: motion 1s ease-in-out;
+  z-index: -50;
+}
+.sidebar-container.login .sidebar-card {
+    bottom: 2rem;
+    right: 2rem;
+}
+@keyframes motion {
+  0% {
+    bottom: -300px;
+    right: -200px;
+    transform: rotateZ(-40deg);
+    -webkit-transform: rotateZ(-40deg);
+    -moz-transform: rotateZ(-40deg);
+    -ms-transform: rotateZ(-40deg);
+    -o-transform: rotateZ(-40deg);
+  }
+  100% {
+    bottom: 2rem;
+    right: 2rem;
+    transform: rotateZ(15deg);
+  }
+}
+
+.sidebar-card__img {
+  width: calc(100% - 4rem);
+  height: calc(200px - 4rem);
+  background: url(../images/elements/geomatric.svg) no-repeat;
+  background-size: cover;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.sidebar-card__text {
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+.sidebar-card__text__title {
+  font-weight: 700;
+}
+.sidebar-card__text__desc {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+/* sidebar container login */

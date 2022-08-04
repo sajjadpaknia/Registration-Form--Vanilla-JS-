@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Registration Form</title>
+</head>
+
+<body>
+  <section class="container center">
+    <section class="app hidden">
+      <!-- form container -->
+      <section class="form-container">
+        <header class="form-container-logo">
+          <figure class="logo-container">
+            <img class="logo-container-img" src="./assets/images/logo.svg" alt="logo picture" />
+            <p class="logo-caption capitalize">travel agency</p>
+          </figure>
+        </header>
+
+        <section class="form-container-wrapper">
+          <main class="form-container-content login show">
+            <header class="title-actions">
+              <div>
+                <h1 class="title-actions__headline capitalize">Log in</h1>
+                <p class="title-actions__desc">See your growth and get consulting support !</p>
+              </div>
+              <ul class="auth-connections flex ">
+                <a href="#" class="auth-connections__item hidden align-horizontally google">
+                  <div class="auth-connections__item__logo center">
+                    <img src="./assets/images/icon/google-icon.svg" alt="google icon">
+                  </div>
+                  <p class="auth-connections__item__text">Log in with Google</p>
+                </a>
+                <a href="#" class="auth-connections__item hidden align-horizontally twitter">
+                  <div class="auth-connections__item__logo center">
+                    <img src="./assets/images/icon/twitter-icon.svg" alt="google icon">
+                  </div>
+                  <p class="auth-connections__item__text">Log in with Twitter</p>
+                </a>
+              </ul>
+            </header>
+            <form class="form-box login">
+              <fieldset class="email-fieldset" name="login">
+                <label for="email">
+                  <div class="title-input">Email</div>
+                </label>
+                <input type="text" id="email" data-input="login-email" name="login-form-email-input" />
+                <div class="sub-input-container">
+                  <p class="input-error-msg"></p>
+                </div>
+              </fieldset>
+              <fieldset class="password-fieldset">
+                <label for="password">
+                  <div class="title-input">Password</div>
+                </label>
+                <div class="password-input__container relative">
+                  <div class="eye-icon-container center">
+                    <img src="./assets/images/icon/eye.svg" alt="eye icon" />
+                    <img src="./assets/images/icon/eye2.svg" alt="eye icon" />
+                  </div>
+                  <input type="password" id="password" data-input="password" name="login-form-password-input" />
+                  <div class="sub-input-container">
+                    <p class="input-error-msg"></p>
+                    <a class="forgot-password" href="#">Forgot password ?</a>
+                  </div>
+                </div>
+              </fieldset>
+              <section class="submit-btn-container">
+                <button class="submit__btn center" type="submit" id="login-btn" data-input="submit">
+                  <div class="loader"></div>
+                  <span class="submit__btn__text capitalize">Login</span>
+                </button>
+              </section>
+            </form>
+            <footer class="sub-content center">
+              <p class="sign-up-msg align-horizontally">
+                No account ?
+                <a class="sign-up-msg__link" onclick="goToSignUp()" href="#">Sign up</a>
+              </p>
+            </footer>
+          </main>
+          <main class="form-container-content signUp hide">
+            <header class="title-actions ">
+              <div>
+                <h1 class="title-actions__headline">Sign up</h1>
+                <p class="title-actions__desc">Create a new account for free !</p>
+              </div>
+              <ul class="step flex capitalize ">
+                <li class="step__item hidden align-horizontally active">
+                  <div class="step__item__number center">
+                    <span class="step__item__number__text">1</span>
+                    <img class="step__item__number__img" src="./assets/images/icon/check.svg" alt="check svg">
+                  </div>
+                  <p class="step__item__title">Sign up</p>
+                </li>
+                <li class="step__item hidden align-horizontally ">
+                  <div class="step__item__number center">
+                    <span class="step__item__number__text">2</span>
+                    <img class="step__item__number__img" src="./assets/images/icon/check.svg" alt="check svg">
+                  </div>
+                  <p class="step__item__title">Account</p>
+                </li>
+                <li class="step__item hidden align-horizontally">
+                  <div class="step__item__number center">
+                    <span class="step__item__number__text">3</span>
+                    <img class="step__item__number__img" src="./assets/images/icon/check.svg" alt="check svg">
+                  </div>
+                  <p class="step__item__title">upload</p>
+                </li>
+              </ul>
+            </header>
+            <main class="form-box-container-wrapper">
+              <div class="form-box-container align-horizontally signUp-form show step-form" id="signUp-form">
+                <form class="form-box signUp" id="signUp-form">
+                  <fieldset class="name-box-fieldset">
+                    <fieldset class="fieldset-input__container">
+                      <fieldset class="name-fieldset" id="signUp-fieldset"> <label for="fname-field">
+                          <div class="title-input">First Name</div>
+                        </label>
+                        <input class="f-name" type="text" id="fname-field" data-input="name" name="first-name" />
+                        <div class="sub-input-container">
+                          <p class="input-error-msg"></p>
+                        </div>
+                      </fieldset>
+                      <fieldset class="name-fieldset" id="signUp-fieldset"> <label for="lname-field">
+                          <div class="title-input">Last Name</div>
+                        </label>
+                        <input class="l-name" type="text" id="lname-field" name="last-name" data-input="name" />
+                        <div class="sub-input-container">
+                          <p class="input-error-msg"></p>
+                        </div>
+                      </fieldset>
+                    </fieldset>
+
+                  </fieldset>
+                  <fieldset class="email-fieldset " id="signUp-fieldset">
+                    <label for="email">
+                      <div class="title-input">Email</div>
+                    </label>
+                    <input type="text" id="email" data-input="email" name="signUp-form-email-input" />
+                    <div class="sub-input-container">
+                      <p class="input-error-msg"></p>
+                    </div>
+                  </fieldset>
+                  <section class="submit-btn-container">
+                    <button class="submit__btn center  next-btn" name="signUp-next-btn">
+                      <div class="loader"></div>
+                      <span class="submit__btn__text capitalize">Next</span>
+                    </button>
+                  </section>
+                </form>
+              </div>
+              <div class="form-box-container align-horizontally account-form step-form " id="account-form">
+                <form class="form-box signUp" id="account-form">
+                  <fieldset class="username-fieldset" id="account-fieldset">
+                    <label for="username">
+                      <div class="title-input">Username</div>
+                    </label>
+                    <input type="text" id="username" />
+                    <div class="sub-input-container">
+                      <p class="input-error-msg"></p>
+                    </div>
+                  </fieldset>
+                  <fieldset class="fieldset-input__container">
+                    <fieldset class="password-fieldset" id="account-fieldset">
+                      <label for="password">
+                        <div class="title-input">Password</div>
+                      </label>
+                      <input type="password" id="password" name="signUp-form-password-input" data-input='password' />
+                      <div class="sub-input-container">
+                        <p class="input-error-msg"></p>
+                      </div>
+                    </fieldset>
+                    <fieldset class="password-fieldset" id="account-fieldset">
+                      <label for="password">
+                        <div class="title-input">Repeat Password</div>
+                      </label>
+                      <input type="password" id="password" class="signUp-form-repeat-password"
+                        name="signUp-form-repeat-password-input" data-input='password' />
+                      <div class="sub-input-container">
+                        <p class="input-error-msg"></p>
+                      </div>
+                    </fieldset>
+                  </fieldset>
+                  <section class="submit-btn-container">
+                    <button class="submit__btn center next-btn" name="account-next-btn">
+                      <div class="loader"></div>
+                      <span class="submit__btn__text capitalize ">Next</span>
+                    </button>
+                  </section>
+                </form>
+              </div>
+              <div class="form-box-container align-horizontally upload-form step-form " id="upload-form">
+                <form class="form-box signUp" id="upload-form">
+                  <fieldset class="upload-fieldset center hidden">
+                    <div class="add_file">
+                      <div class="add_file__icon">
+                        <img class="add_file__icon__img" src="./assets/images/elements/arrow.svg" alt="">
+                      </div>
+                      <div class="add_file__desc">
+                        <p class="add_file__desc__title">Please upload your CV.
+                        </p>
+                        <p class="add_file__desc__support">( Supported file : PDF )</p>
+                      </div>
+                    </div>
+                    <input class="upload-input" type="file" hidden accept=".pdf">
+                  </fieldset>
+                  <section class="upload-result flex hidden">
+                    <section class="upload-result__file flex hide">
+                      <div class="flex">
+                        <div class="upload-result__icon">
+                          <img src="./assets/images/icon/document.svg" alt="">
+                        </div>
+                        <p class="upload-result__file-name" title="hello">my-cv.pdf</p>
+                      </div>
+                      <p class="upload-result__file-size">943 KB</p>
+                      <div class="upload-result__file-success">
+                        <img src="./assets/images/icon/tick2.svg" alt="">
+                      </div>
+                    </section>
+                    <section class="upload-result__progress flex hide">
+                      <div class="progress-bar">
+                        <div class="progress-bar--load"></div>
+                      </div>
+                      <div class="progress-percent">27%</div>
+                    </section>
+                  </section>
+                  <section class="submit-btn-container">
+                    <button class="submit__btn center upload-form-btn" name="upload-next-btn">
+                      <div class="loader"></div>
+                      <span class="submit__btn__text capitalize ">Submit</span>
+                    </button>
+                  </section>
+                </form>
+              </div>
+            </main>
+            <footer class="sub-content center">
+              <p class="sign-up-msg align-horizontally">
+                Have a account ?
+                <a class="sign-up-msg__link" onclick="goToLogin()" href="#">Log in</a>
+              </p>
+            </footer>
+        </section>
+      </section>
+      <!-- form container -->
+      <section class="sidebar-container login hidden">
+        <header class="sidebar-logo-contianer">
+          <img class="sidebar-logo" src="./assets/images/elements/logo.svg" alt="logo" />
+        </header>
+        <main class="sidebar-content">
+          <header class="sidebar-heading capitalize">
+            <p class="sidebar-heading__text">welcome</ح>
+          </header>
+          <main class="sidebar-big-title capitalize">
+            <h1 class="sidebar-big-title__text">Travel and enjoy<span
+                style="color: hsl(40, 99%, 55%); font-size: 8rem;">.</span></h1>
+          </main>
+
+          <footer class="sidebar-description">
+            <div class="sidebar-description-container relative">
+              <p class="sidebar-description__text">If you want to have a good trip, plan ahead. A few days before the
+                trip, make a proper plan for the route you want to go.</p>
+              <div class="sidebar-description__author capitalize">
+                <p class="sidebar-description__author__name">Qoutly</p>
+                <p class="sidebar-description__author__sub-name">Travel Agency</p>
+              </div>
+            </div>
+          </footer>
+        </main>
+        <section class="sidebar-card hidden">
+          <figure class="sidebar-card__img"></figure>
+          <div class="sidebar-card__text capitalize">
+            <h6 class="sidebar-card__text__title">membership card</h6>
+            <p class="sidebar-card__text__desc">This is a great offer for you.</p>
+          </div>
+        </section>
+        <section class="sidebar-elements">
+          <div class="element-1"></div>
+          <div class="element-2"></div>
+          <div class="element-3"></div>
+        </section>
+      </section>
+    </section>
+  </section>
+  <script src="./assets/js/app2.js"></script>
+</body>
+
+</html>
