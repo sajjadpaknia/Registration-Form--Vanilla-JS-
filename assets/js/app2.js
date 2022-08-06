@@ -511,9 +511,16 @@ const mediaQuery = window.matchMedia("(max-width: 870px)");
 if (mediaQuery.matches) {
   document.querySelector(
     ".auth-connections__item.google > .auth-connections__item__text"
-  ).innerHTML = "Google";
+  ).textContent = "Google";
   document.querySelector(
     ".auth-connections__item.twitter > .auth-connections__item__text"
-  ).innerHTML = "Twitter";
+  ).textContent = "Twitter";
+} else {
+  document.querySelector(
+    ".auth-connections__item.google > .auth-connections__item__text"
+  ).textContent = "Log in with Google";
+  document.querySelector(
+    ".auth-connections__item.twitter > .auth-connections__item__text"
+  ).textContent = "Log in with Twitter";
 }
 // media query
