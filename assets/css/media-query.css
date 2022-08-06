@@ -23,6 +23,16 @@
   .auth-connections {
     line-height: 1.5;
   }
+  .submit-btn-container {
+    height: 40px;
+  }
+  .submit__btn {
+    min-width: 100px;
+  }
+  .submit__btn:not(.loading)::before {
+    content: "";
+    display: none;
+  }
 }
 @media (max-width: 400px) {
   .step__item__title {
@@ -35,7 +45,7 @@
   .upload-result__file-size {
     display: none;
   }
-  .add_file__desc__title{
+  .add_file__desc__title {
     font-size: 1.2rem;
   }
 }

@@ -494,6 +494,99 @@ input[type="password"]:focus {
   font-size: 1.4rem;
   margin-top: 0.5rem;
 }
+
+/* submit button section */
+.submit-btn-container {
+  height: 45px;
+  /* background-color: crimson; */
+  direction: rtl;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+.prev__btn--back {
+  min-width: 120px;
+  height: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  background: var(--color-black-10);
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -ms-transition: background 0.3s;
+  -o-transition: background 0.3s;
+}
+.prev__btn--back:hover {
+  background: var(--color-black-20);
+}
+.submit__btn {
+  background: var(--color-primary);
+  color: var(--color-white-100);
+  min-width: 120px;
+  height: 100%;
+  padding: 0 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.submit__btn .loader {
+  display: none;
+}
+.submit__btn.loading .loader {
+  display: block;
+}
+.submit__btn.loading .submit__btn__text {
+  display: none;
+}
+
+.submit__btn:not(.loading)::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 7px;
+  background: url(../images/icon/arrow.svg) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.submit__btn:hover::before {
+  width: 18px;
+  margin-left: 1rem;
+}
+
+/* submit button section */
+.sub-content {
+  width: 100%;
+  height: 40px;
+  /* background-color: rgb(255, 130, 151); */
+  font-size: 1.4rem;
+}
+.sign-up-msg__link {
+  display: block;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  color: var(--color-secondary);
+  margin-inline-start: 0.5rem;
+  transition: border-bottom 0.3s;
+  -webkit-transition: border-bottom 0.3s;
+  -moz-transition: border-bottom 0.3s;
+  -ms-transition: border-bottom 0.3s;
+  -o-transition: border-bottom 0.3s;
+  border-bottom: 1px solid var(--color-secondary);
+}
+.sign-up-msg__link:hover {
+  border-bottom: 1px solid var(--color-secondary);
+}
+/* form container submit */
+
 /* error container */
 .sub-input-container {
   width: 100%;
