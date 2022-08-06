@@ -2,10 +2,27 @@
   .app {
     grid-template-columns: minmax(300px, 400px) !important;
   }
+  .form-container-wrapper {
+    margin-top: 3rem;
+  }
+  .fieldset-input__container{
+    margin-bottom: 1rem;
+  }
+  .logo-container-img {
+    width: 70px !important;
+  }
+  .logo-caption {
+    font-size: 1.3rem;
+  }
   .sidebar-container {
     display: none;
   }
-  .auth-connections{
+  .auth-connections {
     line-height: 1.5;
+  }
+}
+@media (max-width: 400px) {
+  .step__item__title {
+    font-size: 0.99rem;
   }
 }
