@@ -1,0 +1,11 @@
+@media (max-width: 870px) {
+  .app {
+    grid-template-columns: minmax(300px, 400px) !important;
+  }
+  .sidebar-container {
+    display: none;
+  }
+  .auth-connections{
+    line-height: 1.5;
+  }
+}

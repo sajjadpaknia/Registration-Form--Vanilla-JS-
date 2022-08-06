@@ -3,6 +3,7 @@
 @import url(./mini-styles.css);
 @import url(./login-form.css);
 @import url(./sidebar.css);
+@import url(./media-query.css);
 body {
   font-family: "Inter", sans-serif;
   font-weight: 500;

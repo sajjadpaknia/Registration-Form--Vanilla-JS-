@@ -504,3 +504,17 @@ submitBtnLast.addEventListener("click", (e) => {
 });
 // submit
 // uploading file
+
+// media query
+function mediaQuery(x) {
+  if (x.matches) {
+    document.body.style.backgroundColor = "yellow";
+  } else {
+    document.body.style.backgroundColor = "pink";
+  }
+}
+
+var x = window.matchMedia("(max-width: 700px)");
+mediaQuery(x);
+x.addListener(mediaQuery);
+// media query
