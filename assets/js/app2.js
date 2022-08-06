@@ -24,9 +24,9 @@ const submitBtn = document.querySelectorAll(".submit__btn");
 const nextBtns = document.querySelectorAll(".next-btn");
 const stepForms = document.querySelectorAll(".step-form");
 const inputs = document.querySelectorAll("input");
-inputs.forEach((i) => {
-  i.autocomplete = "off";
-});
+// inputs.forEach((i) => {
+//   i.autocomplete = "off";
+// });
 // login validation
 loginForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -506,15 +506,14 @@ submitBtnLast.addEventListener("click", (e) => {
 // uploading file
 
 // media query
-function mediaQuery(x) {
-  if (x.matches) {
-    document.body.style.backgroundColor = "yellow";
-  } else {
-    document.body.style.backgroundColor = "pink";
-  }
-}
+const mediaQuery = window.matchMedia("(max-width: 870px)");
 
-var x = window.matchMedia("(max-width: 700px)");
-mediaQuery(x);
-x.addListener(mediaQuery);
+if (mediaQuery.matches) {
+  document.querySelector(
+    ".auth-connections__item.google > .auth-connections__item__text"
+  ).innerHTML = "Google";
+  document.querySelector(
+    ".auth-connections__item.twitter > .auth-connections__item__text"
+  ).innerHTML = "Twitter";
+}
 // media query

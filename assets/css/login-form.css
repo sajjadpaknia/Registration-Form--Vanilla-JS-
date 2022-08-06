@@ -425,6 +425,7 @@ input[type="password"]:focus {
   margin-left: 1rem;
 }
 .upload-result__file-size {
+  white-space: nowrap;
   font-size: 1.1rem;
 }
 .upload-result__file-success {

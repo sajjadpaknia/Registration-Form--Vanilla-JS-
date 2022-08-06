@@ -2,10 +2,13 @@
   .app {
     grid-template-columns: minmax(300px, 400px) !important;
   }
+  .title-actions__desc {
+    font-size: 1.1rem;
+  }
   .form-container-wrapper {
     margin-top: 3rem;
   }
-  .fieldset-input__container{
+  .fieldset-input__container {
     margin-bottom: 1rem;
   }
   .logo-container-img {
@@ -24,5 +27,15 @@
 @media (max-width: 400px) {
   .step__item__title {
     font-size: 0.99rem;
+  }
+  .title-input {
+    font-size: 1.3rem;
+  }
+  .upload-result__file-success,
+  .upload-result__file-size {
+    display: none;
+  }
+  .add_file__desc__title{
+    font-size: 1.2rem;
   }
 }
